@@ -1,25 +1,18 @@
 import {
-  Divider,
-  HorizontalStack,
-  ResourceItem,
   Text,
-  Thumbnail,
 } from "@shopify/polaris";
-import { ValueTypes } from "../../../zeus";
 
 type ProviderInfoProps = {
   name: string;
-  serviceData: {id: number, name: string}[];
+  serviceData: { id: number; name: string }[];
 };
 
-export default function ProviderInfo({
-  name, serviceData
-}: ProviderInfoProps) {
+export default function ProviderInfo({ name, serviceData }: ProviderInfoProps) {
   return (
     <>
       <div className="py-5">
         <Text breakWord variant="bodyMd" fontWeight="bold" as="h4">
-        {name}
+          {name}
         </Text>
       </div>
       <div>
@@ -27,10 +20,10 @@ export default function ProviderInfo({
           Ydelser
         </Text>
         {serviceData.map((service: any) => (
-            <Text key={service.id} as="p" variant="bodySm">
-              {service.name}
-            </Text>
-          ))}
+          <Text key={service.id} as="p" variant="bodySm">
+            {service.name}
+          </Text>
+        ))}
       </div>
     </>
   );
