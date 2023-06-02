@@ -39,7 +39,7 @@ export default async function ProvidersBody(providers: ProvidersBodyProps) {
             })}
         </ProviderGrid>
         <div className="mt-5">
-          <Link url="/providers?municipality=7">Find flere levenrandører</Link>
+          <Link url="/providers?municipality=1">Find flere levenrandører</Link>
         </div>
       </div>
     </AppProvider>

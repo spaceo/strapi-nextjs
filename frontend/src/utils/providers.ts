@@ -30,5 +30,5 @@ import { ValueTypes } from "../../zeus";
 
 export const getProviderLogoUrl = (attributes: Required<ValueTypes["ProviderEntity"]>["attributes"]) => {
   const url = attributes.logo?.data?.attributes?.url;
-  return url ? `http://localhost:1337${url}` : null;
+  return url ? `https://profekto-strapi.herokuapp.com${url}` : null;
 }
