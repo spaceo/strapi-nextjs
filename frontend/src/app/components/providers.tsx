@@ -3,6 +3,8 @@ import ProvidersBody from "./providersBody";
 
 export default async function Providers() {
   const {
+    // TODO: Fix this type
+    // @ts-ignore
     providers: { data: providers },
   } = await client("query")({
     providers: [
