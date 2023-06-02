@@ -5,6 +5,7 @@ import ProviderFilter from "./providerFilter";
 import ProviderList from "./providerList";
 import { useCallback, useState } from "react";
 import { setQueryParametersInUrl } from "@/utils/url";
+import { Link } from "@shopify/polaris";
 
 export default function ProviderSearchUi() {
   const urlParams = useSearchParams();
@@ -26,6 +27,9 @@ export default function ProviderSearchUi() {
       {selectedMunicipality && (
         <ProviderList selectedMunicipality={selectedMunicipality} />
       )}
+      <div className="mt-5">
+        <Link url="/">⏴ Tilbage til forsiden</Link>
+      </div>
     </>
   );
 }
