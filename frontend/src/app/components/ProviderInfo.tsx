@@ -18,12 +18,12 @@ export default function ProviderInfo({
   return (
     <>
       <div className="py-5">
-        <Text variant="bodyMd" fontWeight="bold" as="h4">
+        <Text breakWord variant="bodyMd" fontWeight="bold" as="h4">
         {name}
         </Text>
       </div>
       <div>
-        <Text as="h4" variant="headingSm">
+        <Text breakWord as="h4" variant="headingSm">
           Ydelser
         </Text>
         {serviceData.map((service: any) => (
