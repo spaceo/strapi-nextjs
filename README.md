@@ -39,7 +39,7 @@ Email: `strapi_admin`
 Password: `Strapi_admin1`
 
 #### Create Strapi public token
-Go to the `API Tokens` menu point.
+Go to the `Settings -> Global Settings -> API Tokens` menu point.
 Create token and copy it. You need it for the frontend configuration.
 ![strapi_token_screenshot](./documentation/strapi_token_screenshot.png)
 
@@ -47,7 +47,7 @@ Create token and copy it. You need it for the frontend configuration.
 ### Get frontend up
 
 #### Enter frontend
-From the root of the project:
+In another terminal session and from the root of the project:
 
 ```bash
 cd frontend
@@ -63,12 +63,13 @@ Edit the `.env` file and write the Strapi token instead of `INSERT_STRAPI_TOKEN_
 Now you are ready to run the frontend:
 
 ```bash
-cp .env.local.example .env
 yarn
 yarn dev
 ```
 
 #### Visit frontend
 Go to http://localhost:3000
+
+Et voilà!! 🎉🎉
 
 The very first load of the Next application takes time. Be patient 😉
