@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --p-color-bg-app: #eceef3;
+}
+
 .Polaris-Badge {
   margin: 1px;
 }
