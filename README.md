@@ -41,7 +41,7 @@ Password: `Strapi_admin1`
 #### Create Strapi public token
 Go to the `API Tokens` menu point.
 Create token and copy it. You need it for the frontend configuration.
-![strapi_token_screenshot](./9f212aefdf85cbf78d29bce6140a618272b0b10e/strapi_token_screenshot.png)
+![strapi_token_screenshot](./documentation/strapi_token_screenshot.png)
 
 
 ### Get frontend up
