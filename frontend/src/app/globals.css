@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.Polaris-Badge {
+  margin: 1px;
+}
+.Polaris-Badge .Polaris-Text--root {
+  padding: 2.5px;
+}

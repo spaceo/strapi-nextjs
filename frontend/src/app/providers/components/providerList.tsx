@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import client from "../../../../client/client";
 import {
   AppProvider,
-  HorizontalStack,
   LegacyCard,
   ResourceItem,
   ResourceList,
@@ -13,6 +12,7 @@ import ProviderInfo from "@/app/components/ProviderInfo";
 import { formatServiceData } from "@/utils/services";
 import { getProviderLogoUrl } from "@/utils/providers";
 import { stagger, useAnimate } from "framer-motion";
+import ProviderListItem from "./providerListItem";
 
 export default function ProviderList({
   selectedMunicipality,
@@ -123,23 +123,21 @@ export default function ProviderList({
                 const media = <Thumbnail source={logoUrl} alt={name} />;
 
                 return (
-                  <motion.div
-                    variants={{
-                      hidden: { opacity: 0 },
-                      show: { opacity: 1 },
-                    }}
+                  <ResourceItem
+                    id={id}
+                    url={url}
+                    media={media}
+                    accessibilityLabel={`View details for ${name}`}
                   >
-                    <ResourceItem
-                      id={id}
-                      url={url}
-                      media={media}
-                      accessibilityLabel={`View details for ${name}`}
+                    <motion.div
+                      variants={{
+                        hidden: { opacity: 0 },
+                        show: { opacity: 1 },
+                      }}
                     >
-                      <HorizontalStack gap="20" wrap={false}>
-                        <ProviderInfo name={name} serviceData={serviceData} />
-                      </HorizontalStack>
-                    </ResourceItem>
-                  </motion.div>
+                      <ProviderListItem name={name} serviceData={serviceData} />
+                    </motion.div>
+                  </ResourceItem>
                 );
               }}
             />
