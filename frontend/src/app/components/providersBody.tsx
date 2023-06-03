@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import { AppProvider, Link } from "@shopify/polaris";
 import { ValueTypes } from "../../../zeus";
 import ProviderCard from "./providerCard";
@@ -29,17 +30,32 @@ export default async function ProvidersBody(providers: ProvidersBodyProps) {
       }}
     >
       <div className="p-5">
-        <ProviderGrid>
-          {providers.providers &&
-            providers.providers.map((provider) => {
-              const { id, attributes } = provider;
-              if (!attributes || !attributes?.Title) return null;
+        <motion.div
+          variants={{
+            show: {
+              transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.3,
+              },
+            },
+          }}
+          initial="hidden"
+          animate="show"
+        >
+          <ProviderGrid>
+            {providers.providers &&
+              providers.providers.map((provider) => {
+                const { id, attributes } = provider;
+                if (!attributes || !attributes?.Title) return null;
 
-              return <ProviderCard key={String(id)} provider={provider} />;
-            })}
-        </ProviderGrid>
+                return <ProviderCard key={String(id)} provider={provider} />;
+              })}
+          </ProviderGrid>
+        </motion.div>
         <div className="mt-5">
-          <Link url="/providers?municipality=1">Find flere levenrandører ⏵</Link>
+          <Link url="/providers?municipality=2">
+            Find flere levenrandører ⏵
+          </Link>
         </div>
       </div>
     </AppProvider>

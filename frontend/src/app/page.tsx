@@ -1,3 +1,4 @@
+import "./front-page.css";
 import { Suspense } from "react";
 import Providers from "./components/providers";
 import WelcomeText from "./components/velcomeText";
