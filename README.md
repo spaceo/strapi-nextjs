@@ -35,7 +35,7 @@ yarn develop
 #### Login to Strapi
 Go to http://localhost:1337/admin and login with:
 
-Email: `strapi_admin`
+Email: `strapi_admin@example.com`
 Password: `Strapi_admin1`
 
 #### Create Strapi public token
