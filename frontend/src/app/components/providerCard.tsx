@@ -1,9 +1,8 @@
 "use client";
-import { Card, Text, Thumbnail } from "@shopify/polaris";
+import { Card, Thumbnail } from "@shopify/polaris";
 import ProviderInfo from "./ProviderInfo";
 import { formatServiceData } from "@/utils/services";
 import { getProviderLogoUrl } from "@/utils/providers";
-import { Provider } from "@/types/types";
 import { ValueTypes } from "../../../zeus";
 
 type ProviderCardProps = {
