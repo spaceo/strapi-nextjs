@@ -4,9 +4,10 @@ import { AppProvider, Link } from "@shopify/polaris";
 import { ValueTypes } from "../../../zeus";
 import ProviderCard from "./providerCard";
 import ProviderGrid from "./providerGrid";
+import { Provider } from "@/types/types";
 
 type ProvidersBodyProps = {
-  providers: ValueTypes["ProviderEntity"][];
+  providers: Provider[];
 };
 
 export default async function ProvidersBody(providers: ProvidersBodyProps) {

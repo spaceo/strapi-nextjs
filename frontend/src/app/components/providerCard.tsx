@@ -4,13 +4,13 @@ import { Card, Thumbnail } from "@shopify/polaris";
 import ProviderInfo from "./ProviderInfo";
 import { formatServiceData } from "@/utils/services";
 import { getProviderLogoUrl } from "@/utils/providers";
-import { ValueTypes } from "../../../zeus";
+import { Provider, Service } from "@/types/types";
 
 type ProviderCardProps = {
-  provider: Required<ValueTypes["ProviderEntityResponse"]>["data"] & {
+  provider: Provider & {
     attributes: {
       services: {
-        data: Required<ValueTypes["ServiceEntityResponse"]>["data"];
+        data: Service[];
       };
     };
   };
