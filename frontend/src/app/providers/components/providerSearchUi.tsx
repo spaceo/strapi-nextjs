@@ -19,7 +19,7 @@ export default function ProviderSearchUi() {
   }, []);
 
   return (
-    <div className="w-5/6">
+    <div className="">
       <ProviderFilter
         initialMunicipality={selectedMunicipality}
         selectedMunicipalityHandler={selectedMunicipalityHandler}
@@ -28,7 +28,7 @@ export default function ProviderSearchUi() {
         <ProviderList selectedMunicipality={selectedMunicipality} />
       )}
       <div className="mt-5">
-        <Link url="/">⏴ Tilbage til forsiden</Link>
+        <Link url="/">Tilbage til forsiden</Link>
       </div>
     </div>
   );

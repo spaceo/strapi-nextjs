@@ -35,7 +35,7 @@ export default function ProviderListBody({
         },
       }}
     >
-      <div className="mt-10">
+      <div className="mt-5">
         <motion.div
           variants={{
             show: {

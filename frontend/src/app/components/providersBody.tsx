@@ -53,7 +53,7 @@ export default async function ProvidersBody(providers: ProvidersBodyProps) {
         </motion.div>
         <div className="mt-5">
           <Link url="/providers?municipality=2">
-            Find flere levenrandører ⏵
+            Find flere levenrandører
           </Link>
         </div>
       </div>
