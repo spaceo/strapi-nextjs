@@ -1,13 +1,14 @@
 import { Badge, Text } from "@shopify/polaris";
 
 type ProviderInfoProps = {
+  id: string;
   name: string;
   serviceData: { id: number; name: string }[];
 };
 
-export default function ProviderInfo({ name, serviceData }: ProviderInfoProps) {
+export default function ProviderInfo({ id, name, serviceData }: ProviderInfoProps) {
   return (
-    <>
+    <div id={id}>
       <div className="py-5">
         <Text breakWord variant="bodyMd" fontWeight="bold" as="h4">
           {name}
@@ -20,6 +21,6 @@ export default function ProviderInfo({ name, serviceData }: ProviderInfoProps) {
           </span>
         ))}
       </div>
-    </>
+    </div>
   );
 }

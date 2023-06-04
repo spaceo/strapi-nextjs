@@ -19,7 +19,7 @@ export default function ProviderSearchUi() {
   }, []);
 
   return (
-    <div className="">
+    <div>
       <ProviderFilter
         initialMunicipality={selectedMunicipality}
         selectedMunicipalityHandler={selectedMunicipalityHandler}

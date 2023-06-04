@@ -16,3 +16,8 @@
   margin: 10px 0;
   min-width: 200px;
 }
+
+.provider-card > div:hover {
+  cursor: pointer;
+  background-color: rgba(var(--p-color-bg), 1.5)
+}

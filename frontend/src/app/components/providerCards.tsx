@@ -1,9 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
-import { AppProvider, Link } from "@shopify/polaris";
-import { ValueTypes } from "../../../zeus";
+import { AppProvider } from "@shopify/polaris";
 import ProviderCard from "./providerCard";
-import ProviderGrid from "./providerGrid";
 import { Provider } from "@/types/types";
 
 type ProviderCardsProps = {

@@ -9,14 +9,14 @@ import { Provider, Service } from "@/types/types";
 type ProviderCardProps = {
   provider: Provider & {
     attributes: {
-      services: {
-        data: Service[];
+      services?: {
+        data?: Service[];
       };
     };
   };
 };
 
-export default function ProviderCard({ provider }: ProviderCardProps) {
+export default function ProviderCard({ provider, provider: {id} }: ProviderCardProps) {
   if (!provider.attributes?.services?.data) {
     return null;
   }
@@ -30,10 +30,19 @@ export default function ProviderCard({ provider }: ProviderCardProps) {
         show: { opacity: 1 },
       }}
     >
-      <Card>
-        {logoUrl && <Thumbnail source={logoUrl} alt={name} />}
-        <ProviderInfo name={name} serviceData={serviceData} />
-      </Card>
+      <a
+        aria-describedby={id as string}
+        aria-label={`View details about ${name}`}
+        tabIndex={0}
+        href="/"
+      >
+        <div className="provider-card h-full">
+          <Card>
+            {logoUrl && <Thumbnail source={logoUrl} alt={name} />}
+            <ProviderInfo id={id as string} name={name} serviceData={serviceData} />
+          </Card>
+        </div>
+      </a>
     </motion.div>
   );
 }
