@@ -2,11 +2,7 @@ import client from "../../../client/client";
 import ProvidersBody from "./providersBody";
 
 export default async function Providers() {
-  const {
-    // TODO: Fix this type
-    // @ts-ignore
-    providers: { data: providers },
-  } = await client("query")({
+  const response = await client("query")({
     providers: [
       {},
       {
@@ -32,9 +28,14 @@ export default async function Providers() {
     ],
   });
 
+  if (!response?.providers?.data) {
+    return <div>Missing provider data...</div>;
+  }
+
+  const { providers: {data: providers} } = response;
   return (
     <>
-      {/** @ts-ignore */}
+      {/* @ts-expect-error Server Component */}
       {providers && <ProvidersBody providers={providers} />}
     </>
   );

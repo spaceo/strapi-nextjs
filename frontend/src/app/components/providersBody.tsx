@@ -9,7 +9,7 @@ type ProvidersBodyProps = {
   providers: Provider[];
 };
 
-export default async function ProvidersBody(providers: ProvidersBodyProps) {
+export default async function ProvidersBody({providers}: ProvidersBodyProps) {
   return (
     <AppProvider
       i18n={{
@@ -43,11 +43,11 @@ export default async function ProvidersBody(providers: ProvidersBodyProps) {
           animate="show"
         >
           <div className="sm:hidden">
-              {providers.providers && <ProviderCards providers={providers.providers} />}
+              {providers && <ProviderCards providers={providers} />}
           </div>
           <div className="hidden sm:block">
             <ProviderGrid>
-              {providers.providers && <ProviderCards providers={providers.providers} />}
+              {providers && <ProviderCards providers={providers} />}
             </ProviderGrid>
           </div>
         </motion.div>

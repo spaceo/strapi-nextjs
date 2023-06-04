@@ -7,10 +7,11 @@ type ProviderCardsProps = {
   providers: Provider[];
 };
 
-export default function ProviderCards(providers: ProviderCardsProps) {
+export default function ProviderCards({providers}: ProviderCardsProps) {
+  console.log(providers);
   return (
     <AppProvider i18n={{}}>
-      {providers.providers.map((provider: Provider) => {
+      {providers.map((provider: Provider) => {
         const { id, attributes } = provider;
         if (!attributes || !attributes?.Title) return null;
 

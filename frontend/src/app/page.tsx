@@ -8,7 +8,7 @@ export default async function Home() {
     <>
       <WelcomeText />
       <Suspense>
-        {/** @ts-ignore */}
+        {/* @ts-expect-error Server Component */}
         <Providers />
       </Suspense>
     </>
