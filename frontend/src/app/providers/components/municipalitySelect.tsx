@@ -8,6 +8,7 @@ export default function MunicipalitySelect({
   onChangeHandler: (value: string) => void;
 }) {
   const options = [
+    { label: "Alle", value: "0" },
     { label: "Bagsværd", value: "3" },
     { label: "Birkerød", value: "1" },
     { label: "Gentofte", value: "2" },

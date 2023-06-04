@@ -15,7 +15,9 @@ export default function ProviderList({
     const getProviders = async () => {
       const { providers } = await client("query")({
         providers: [
-          { filters: { municipalities: { id: { eq: selectedMunicipality } } } },
+          (selectedMunicipality === "0" && {}) || {
+            filters: { municipalities: { id: { eq: selectedMunicipality } } },
+          },
           {
             data: {
               id: true,
