@@ -1,6 +1,6 @@
 import { ValueTypes } from "../../zeus";
 
-export type Municipality = ValueTypes["MunicipalityEntity"];
-export type Provider = ValueTypes["ProviderEntity"];
-export type Service = ValueTypes["ServiceEntity"];
+export type Municipality = Required<ValueTypes["MunicipalityEntity"]>;
+export type Provider = Required<ValueTypes["ProviderEntity"]>;
+export type Service = Required<ValueTypes["ServiceEntity"]>;
 
