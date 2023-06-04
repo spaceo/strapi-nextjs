@@ -13,7 +13,7 @@ export default function ProviderInfo({ name, serviceData }: ProviderInfoProps) {
           {name}
         </Text>
       </div>
-      <div>
+      <div className="min-w-100">
         {serviceData.map((service: any) => (
           <span key={service.id} className="mr-2">
             <Badge>{service.name}</Badge>

@@ -13,7 +13,7 @@ export default function ProviderListItem({ name, serviceData }: ProviderListItem
           {name}
         </Text>
       </div>
-      <div className="col-span-2 hidden md:block">
+      <div className="col-span-2 hidden sm:block">
         {serviceData.map((service: any) => (
           <span key={service.id} className="mr-2">
             <Badge>{service.name}</Badge>

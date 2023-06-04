@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import client from "../../../../client/client";
 import ProviderListBody from "./providerListBody";
+import ProviderCards from "@/app/components/providerCards";
 
 export default function ProviderList({
   selectedMunicipality,
@@ -51,6 +52,13 @@ export default function ProviderList({
   }
 
   return (
-    <ProviderListBody providers={providers} />
+    <>
+      <div className="sm:hidden">
+        <ProviderCards providers={providers} />
+      </div>
+      <div className="hidden sm:block">
+        <ProviderListBody providers={providers} />
+      </div>
+    </>
   );
 }

@@ -12,3 +12,7 @@
 .Polaris-Badge .Polaris-Text--root {
   padding: 2.5px;
 }
+.Polaris-Box {
+  margin: 10px 0;
+  min-width: 200px;
+}

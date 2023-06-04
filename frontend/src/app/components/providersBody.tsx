@@ -1,10 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import { AppProvider, Link } from "@shopify/polaris";
-import { ValueTypes } from "../../../zeus";
-import ProviderCard from "./providerCard";
 import ProviderGrid from "./providerGrid";
 import { Provider } from "@/types/types";
+import ProviderCards from "./providerCards";
 
 type ProvidersBodyProps = {
   providers: Provider[];
@@ -30,7 +29,7 @@ export default async function ProvidersBody(providers: ProvidersBodyProps) {
         },
       }}
     >
-      <div className="p-5">
+      <div className="py-5">
         <motion.div
           variants={{
             show: {
@@ -43,15 +42,14 @@ export default async function ProvidersBody(providers: ProvidersBodyProps) {
           initial="hidden"
           animate="show"
         >
-          <ProviderGrid>
-            {providers.providers &&
-              providers.providers.map((provider) => {
-                const { id, attributes } = provider;
-                if (!attributes || !attributes?.Title) return null;
-
-                return <ProviderCard key={String(id)} provider={provider} />;
-              })}
-          </ProviderGrid>
+          <div className="sm:hidden">
+              {providers.providers && <ProviderCards providers={providers.providers} />}
+          </div>
+          <div className="hidden sm:block">
+            <ProviderGrid>
+              {providers.providers && <ProviderCards providers={providers.providers} />}
+            </ProviderGrid>
+          </div>
         </motion.div>
         <div className="mt-5">
           <Link url="/providers?municipality=2">
