@@ -8,7 +8,6 @@ type ProviderCardsProps = {
 };
 
 export default function ProviderCards({providers}: ProviderCardsProps) {
-  console.log(providers);
   return (
     <AppProvider i18n={{}}>
       {providers.map((provider: Provider) => {
